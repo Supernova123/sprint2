@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
 
-    <title>ready</title>
+    <title>Spellcasters!</title>
 
     <link rel="stylesheet" type="text/css" href="styles.css">
     <!--[if lt IE 9]>
@@ -16,158 +16,391 @@
   <body onload="timer()">
       
       
-      <p id="timerOutput"></p>
+      <h2 id="timerOutput"></h2>
       
-      <script>
+      <section>
+      <img src="img/BY0.png" alt="1" id="0" onclick="clickedImageChange(0)"/>
+      <img src="img/BY1.png" alt="2" id="1" onclick="clickedImageChange(1)"/>
+      <img src="img/BY2.png" alt="3" id="2" onclick="clickedImageChange(2)"/>
+      <img src="img/BY3.png" alt="4" id="3" onclick="clickedImageChange(3)"/>
+      </section>
+      
+      <section>
+      <img src="img/BY4.png" alt="5" id="4" onclick="clickedImageChange(4)"/>
+      <img src="img/BY5.png" alt="6" id="5" onclick="clickedImageChange(5)"/>
+      <img src="img/BY6.png" alt="7" id="6" onclick="clickedImageChange(6)"/>
+      <img src="img/BY7.png" alt="8" id="7" onclick="clickedImageChange(7)"/>
+      </section>
+      
+      <section>
+      <img src="img/BY8.png" alt="9" id="8" onclick="clickedImageChange(8)"/>
+      <img src="img/BY9.png" alt="10" id="9" onclick="clickedImageChange(9)"/>
+      <img src="img/BY10.png" alt="11" id="10" onclick="clickedImageChange(10)"/>
+      <img src="img/BY11.png" alt="12" id="11" onclick="clickedImageChange(11)"/>
+      </section>
+
+      <section>
+      <img src="img/BY12.png" alt="13" id="12" onclick="clickedImageChange(12)"/>
+      <img src="img/BY13.png" alt="14" id="13" onclick="clickedImageChange(13)"/>
+      <img src="img/BY14.png" alt="15" id="14" onclick="clickedImageChange(14)"/>
+      <img src="img/BY15.png" alt="16" id="15" onclick="clickedImageChange(15)"/>
+      </section>
+
+      <section>
+      <img src="img/BY16.png" alt="17" id="16" onclick="clickedImageChange(16)"/>
+      <img src="img/BY17.png" alt="18" id="17" onclick="clickedImageChange(17)"/>
+      <img src="img/BY18.png" alt="19" id="18" onclick="clickedImageChange(18)"/>
+      <img src="img/BY19.png" alt="20" id="19" onclick="clickedImageChange(19)"/>
+      </section>
+
+      <img src="img/blue_box.png" alt="red_box" style='position:fixed; bottom:0px; left: 40%; padding-top: 40px;'>
+
+      <p id="spellCasted" style='position:fixed; bottom:0px; left: 42%; padding-top: 40px; text-align: left; font-style: "Verdana", sansserif; font-size: 30px; width: 15%;'></p>
+
+      <p class="output" style='display: none';><em>...diagnostic messages</em></p>
+    
+      <script language="javascript">
+
+      var clickedImage;
+      var score = 0;
+          
       function timer(){
           var timerText = document.getElementById("timerOutput");
-          timerText.innerHTML = 15;
-          setTimeout(function(){ timerText.innerHTML="14" }, 1000);
-          setTimeout(function(){ timerText.innerHTML="13" }, 2000);
-          setTimeout(function(){ timerText.innerHTML="12" }, 3000);
-          setTimeout(function(){ timerText.innerHTML="11" }, 4000);
-          setTimeout(function(){ timerText.innerHTML="10" }, 5000);
-          setTimeout(function(){ timerText.innerHTML="9" }, 6000);
-          setTimeout(function(){ timerText.innerHTML="8" }, 7000);
-          setTimeout(function(){ timerText.innerHTML="7" }, 8000);
-          setTimeout(function(){ timerText.innerHTML="6" }, 9000);
-          setTimeout(function(){ timerText.innerHTML="5" }, 10000);
-          setTimeout(function(){ timerText.innerHTML="4" }, 11000);
-          setTimeout(function(){ timerText.innerHTML="3" }, 12000);
-          setTimeout(function(){ timerText.innerHTML="2" }, 13000);
-          setTimeout(function(){ timerText.innerHTML="1" }, 14000);
-          setTimeout(function(){ timerText.innerHTML= "0";}, 15000);
-          setTimeout(function(){ timerText.innerHTML= "TIMEOUT!";}, 16000);
+          timerText.innerHTML = 30;
+          setTimeout(function(){ timerText.innerHTML="29" }, 1000);
+          setTimeout(function(){ timerText.innerHTML="28" }, 2000);
+          setTimeout(function(){ timerText.innerHTML="27" }, 3000);
+          setTimeout(function(){ timerText.innerHTML="26" }, 4000);
+          setTimeout(function(){ timerText.innerHTML="25" }, 5000);
+          setTimeout(function(){ timerText.innerHTML="24" }, 6000);
+          setTimeout(function(){ timerText.innerHTML="23" }, 7000);
+          setTimeout(function(){ timerText.innerHTML="22" }, 8000);
+          setTimeout(function(){ timerText.innerHTML="21" }, 9000);
+          setTimeout(function(){ timerText.innerHTML="20" }, 10000);
+          setTimeout(function(){ timerText.innerHTML="19" }, 11000);
+          setTimeout(function(){ timerText.innerHTML="18" }, 12000);
+          setTimeout(function(){ timerText.innerHTML="17" }, 13000);
+          setTimeout(function(){ timerText.innerHTML="16" }, 14000);
+          setTimeout(function(){ timerText.innerHTML="15" }, 15000);
+          setTimeout(function(){ timerText.innerHTML="14" }, 16000);
+          setTimeout(function(){ timerText.innerHTML="13" }, 17000);
+          setTimeout(function(){ timerText.innerHTML="12" }, 18000);
+          setTimeout(function(){ timerText.innerHTML="11" }, 19000);
+          setTimeout(function(){ timerText.innerHTML="10" }, 20000);
+          setTimeout(function(){ timerText.innerHTML="9" }, 21000);
+          setTimeout(function(){ timerText.innerHTML="8" }, 22000);
+          setTimeout(function(){ timerText.innerHTML="7" }, 23000);
+          setTimeout(function(){ timerText.innerHTML="6" }, 24000);
+          setTimeout(function(){ timerText.innerHTML="5" }, 25000);
+          setTimeout(function(){ timerText.innerHTML="4" }, 26000);
+          setTimeout(function(){ timerText.innerHTML="3" }, 27000);
+          setTimeout(function(){ timerText.innerHTML="2" }, 28000);
+          setTimeout(function(){ timerText.innerHTML="1" }, 29000);
+          setTimeout(function(){ localStorage.setItem('score2', score);}, 30000);
+          setTimeout(function(){window.location.href='final.html'}, 30000);
+          }
+      
+          
+      function clickedImageChange(i){
+          clickedImage = i;
+          console.log(clickedImage);
+          return clickedImage;
       }
+      function changeImage(i) {
+          document.getElementById(i).src = "img/BG"+i+".png";
+          score++;
+          console.log(score);
+      }
+          
+//      function changeImage2() {
+//          document.getElementById("2").src = "img/BG1.png";
+//      }
+//          
+//     function changeImage3() {
+//          document.getElementById("3").src = "img/BG2.png";
+//      }
+//          
+//     function changeImage4() {
+//          document.getElementById("4").src = "img/BG3.png";
+//      }
+//          
+//     function changeImage5() {
+//          document.getElementById("5").src = "img/BG4.png";
+//      }
+//    
+//              
+//     function changeImage6() {
+//          document.getElementById("6").src = "img/BG5.png";
+//          clickedImage = 5;
+//      }
+//          
+//              
+//     function changeImage7() {
+//          document.getElementById("7").src = "img/BG6.png";
+//          clickedImage = 6;
+//      }
+//          
+//              
+//     function changeImage8() {
+//          document.getElementById("8").src = "img/BG7.png";
+//          clickedImage = 7;
+//      }
+//          
+//              
+//     function changeImage9() {
+//          document.getElementById("9").src = "img/BG8.png";
+//          clickedImage = 8;
+//      }
+//          
+//              
+//     function changeImage10() {
+//          document.getElementById("10").src = "img/BG9.png";
+//          clickedImage = 9;
+//      }
+//          
+//              
+//     function changeImage11() {
+//          document.getElementById("11").src = "img/BG10.png";
+//          clickedImage = 10;
+//      }
+//          
+//              
+//     function changeImage12() {
+//          document.getElementById("12").src = "img/BG11.png";
+//          clickedImage = 11;
+//      }
+//          
+//              
+//     function changeImage13() {
+//          document.getElementById("13").src = "img/BG12.png";
+//          clickedImage = 12;
+//      }
+//          
+//              
+//     function changeImage14() {
+//          document.getElementById("14").src = "img/BG13.png";
+//          clickedImage = 13;
+//      }
+//          
+//              
+//     function changeImage15() {
+//          document.getElementById("15").src = "img/BG14.png";
+//          clickedImage = 14;
+//      }
+//          
+//              
+//     function changeImage16() {
+//          document.getElementById("16").src = "img/BG15.png";
+//          clickedImage = 15;
+//      }
+//          
+//              
+//     function changeImage17() {
+//          document.getElementById("17").src = "img/BG16.png";
+//          clickedImage = 16;
+//      }
+//          
+//              
+//     function changeImage18() {
+//          document.getElementById("18").src = "img/BG17.png";
+//          clickedImage = 17;
+//      }
+//          
+//              
+//     function changeImage19() {
+//          document.getElementById("19").src = "img/BG18.png";
+//          clickedImage = 18;
+//      }
+//          
+//              
+//     function changeImage20() {
+//          document.getElementById("20").src = "img/BG19.png";
+//          clickedImage = 19;
+//      }
 
-      </script>
-      
-      
-      
-      
-      <h1>Say em spells!</h1>
-      
-      <img src="img/1.png" alt="1" id="1" onclick="changeImage1()"/>
-      <img src="img/2.png" alt="2" id="2" onclick="changeImage2()"/>
-      <img src="img/3.png" alt="3" id="3" onclick="changeImage3()"/>
-      <img src="img/4.png" alt="4" id="4" onclick="changeImage4()"/>
-      <img src="img/5.png" alt="5" id="5" onclick="changeImage5()"/>
-      <img src="img/6.png" alt="6" id="6" onclick="changeImage6()"/>
-      <img src="img/7.png" alt="7" id="7" onclick="changeImage7()"/>
-      <img src="img/8.png" alt="8" id="8" onclick="changeImage8()"/>
-      <img src="img/9.png" alt="9" id="9" onclick="changeImage9()"/>
-      <img src="img/10.png" alt="10" id="10" onclick="changeImage10()"/>
-      <img src="img/11.png" alt="11" id="11" onclick="changeImage11()"/>
-      <img src="img/12.png" alt="12" id="12" onclick="changeImage12()"/>
-      <img src="img/13.png" alt="13" id="13" onclick="changeImage13()"/>
-      <img src="img/14.png" alt="14" id="14" onclick="changeImage14()"/>
-      <img src="img/15.png" alt="15" id="15" onclick="changeImage15()"/>
-      <img src="img/16.png" alt="16" id="16" onclick="changeImage16()"/>
-      <img src="img/17.png" alt="17" id="17" onclick="changeImage17()"/>
-      <img src="img/18.png" alt="18" id="18" onclick="changeImage18()"/>
-      <img src="img/19.png" alt="19" id="19" onclick="changeImage19()"/>
-      <img src="img/20.png" alt="20" id="20" onclick="changeImage20()"/>
-      
-      <script language="javascript">
-          
-      function changeImage1() {
-          document.getElementById("1").src = "img/1a.png";
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
+var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+var spells = [ 'wingardium leviosa', 'lumos', 'expelliarmus', 'obliviate', 'petrificus', 'accio', 'confringo', 'homenum revelio', 'aguamenti', 'colloportus', 'episkey', 'imperio', 'finestra', 'incendio', 'morsmorde', 'crucio', 'engorgio', 'sectumsempra', 'reparo', 'avada kedavra'];
+var grammar = '#JSGF V1.0; grammar spells; public <spells> = ' + spells.join('  |  ') + ' ;';
+
+var recognition = new SpeechRecognition();
+var speechRecognitionList = new SpeechGrammarList();
+speechRecognitionList.addFromString(grammar, 1);
+recognition.grammars = speechRecognitionList;
+//recognition.continuous = false;
+recognition.lang = 'en-US';
+recognition.interimResults = false;
+recognition.maxAlternatives = 1;
+
+var diagnostic = document.querySelector('.output');
+var bg = document.querySelector('body');
+
+var spellHTML= '';
+spells.forEach(function(v, i, a){
+  console.log(v, i);
+  spellHTML += '<span style="background-color:' + v + ';"> ' + v + ' </span>';
+});
+
+document.body.onclick = function() {
+  recognition.start();
+  console.log('Ready to receive a spell command.');
+}
+
+recognition.onresult = function(event) {
+  // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
+  // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
+  // It has a getter so it can be accessed like an array
+  // The [last] returns the SpeechRecognitionResult at the last position.
+  // Each SpeechRecognitionResult object contains SpeechRecognitionAlternative objects that contain individual results.
+  // These also have getters so they can be accessed like arrays.
+  // The [0] returns the SpeechRecognitionAlternative at position 0.
+  // We then return the transcript property of the SpeechRecognitionAlternative object
+
+  var last = event.results.length - 1;
+  var spell = event.results[last][0].transcript.toLowerCase();
+
+  diagnostic.textContent = 'Result received: ' + spell + '.';
+  document.getElementById('spellCasted').innerHTML = spell;
+  console.log(spell);
+  console.log('Confidence: ' + event.results[0][0].confidence);
+  if (spell === 'wingardium leviosa'){
+      if(clickedImage == 0){
+          changeImage(0);
       }
-          
-      function changeImage2() {
-          document.getElementById("2").src = "img/2a.png";
+  }
+  else if (spell === 'lumos'){
+      if(clickedImage == 1){
+          changeImage(1);
       }
-          
-     function changeImage3() {
-          document.getElementById("3").src = "img/3a.png";
+  }
+
+  else if (spell === 'expelliarmus'){
+      if(clickedImage == 2){
+          changeImage(2);
       }
-          
-     function changeImage4() {
-          document.getElementById("4").src = "img/4a.png";
-      }
-          
-     function changeImage5() {
-          document.getElementById("5").src = "img/5a.png";
-      }
+  }
     
-              
-     function changeImage6() {
-          document.getElementById("6").src = "img/6a.png";
+  else if (spell === 'obliviate'){
+      if(clickedImage == 3){
+          changeImage(3);
       }
-          
-              
-     function changeImage7() {
-          document.getElementById("7").src = "img/7a.png";
+  }
+    
+  else if (spell === 'petrificus totalus'){
+      if(clickedImage == 4){
+          changeImage(4);
       }
-          
-              
-     function changeImage8() {
-          document.getElementById("8").src = "img/8a.png";
+  }
+  
+  else if (spell === 'accio'){
+      if(clickedImage == 5){
+          changeImage(5);
       }
-          
-              
-     function changeImage9() {
-          document.getElementById("9").src = "img/9a.png";
+  }
+    
+  else if (spell === 'confringo'){
+      if(clickedImage == 6){
+          changeImage(6);
       }
-          
-              
-     function changeImage10() {
-          document.getElementById("10").src = "img/10a.png";
+  }
+
+  else if (spell === 'homenum revelio'){
+      if(clickedImage == 7){
+          changeImage(7);
       }
-          
-              
-     function changeImage11() {
-          document.getElementById("11").src = "img/11a.png";
+  }
+    
+  else if (spell === 'aguamenti'){
+      if(clickedImage == 8){
+          changeImage(8);
       }
-          
-              
-     function changeImage12() {
-          document.getElementById("12").src = "img/12a.png";
+  }
+    
+  else if (spell === 'colloportus'){
+      if(clickedImage == 9){
+          changeImage(9);
       }
-          
-              
-     function changeImage13() {
-          document.getElementById("13").src = "img/13a.png";
+  }
+
+  else if (spell === 'episkey'){
+      if(clickedImage == 10){
+          changeImage(10);
       }
-          
-              
-     function changeImage14() {
-          document.getElementById("14").src = "img/14a.png";
+  }
+
+  else if (spell === 'imperio'){
+      if(clickedImage == 11){
+          changeImage(11);
       }
-          
-              
-     function changeImage15() {
-          document.getElementById("15").src = "img/15a.png";
+  }
+    
+  else if (spell === 'finestra'){
+      if(clickedImage == 12){
+          changeImage(12);
       }
-          
-              
-     function changeImage16() {
-          document.getElementById("16").src = "img/16a.png";
+  }
+    
+  else if (spell === 'incendio'){
+      if(clickedImage == 13){
+          changeImage(13);
       }
-          
-              
-     function changeImage17() {
-          document.getElementById("17").src = "img/17a.png";
+  }
+
+  else if (spell === 'morsmorde'){
+      if(clickedImage == 14){
+          changeImage(14);
       }
-          
-              
-     function changeImage18() {
-          document.getElementById("18").src = "img/18a.png";
+  }
+    
+  else if (spell === 'crucio'){
+      if(clickedImage == 15){
+          changeImage(15);
       }
-          
-              
-     function changeImage19() {
-          document.getElementById("19").src = "img/19a.png";
+  }
+    
+  else if (spell === 'engorgio'){
+      if(clickedImage == 16){
+          changeImage(16);
       }
-          
-              
-     function changeImage20() {
-          document.getElementById("20").src = "img/20a.png";
+  }
+
+  else if (spell === 'sectumsempra'){
+      if(clickedImage == 17){
+          changeImage(17);
       }
+  }
+
+  else if (spell === 'reparo'){
+      if(clickedImage == 18){
+          changeImage(18);
+      }
+  }
+
+  else if (spell === 'avada kedavra'){
+      if(clickedImage == 19){
+          changeImage(19);
+      }
+  }
+
+}
+
+recognition.onspeechend = function() {
+  recognition.stop();
+}
+
+recognition.onnomatch = function(event) {
+  diagnostic.textContent = "I didn't recognise that spell.";
+}
+
+recognition.onerror = function(event) {
+  diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
+}
+
+function checkScore(i){
+    
+}
     
 </script>
-      
-      <a href="final.html" class="button">Check who s the GREATEST</a>
-
   </body>
 </html>
