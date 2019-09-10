@@ -39,7 +39,7 @@ ul {
 a.button {
     display: block;
     margin: auto;
-    width: 40px;
+    width: 100px;
     
     -webkit-appearance: button;
     -moz-appearance: button;
