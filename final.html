@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
 
-    <title>Speech color changer</title>
+    <title>Spellcasters!</title>
 
     <link rel="stylesheet" type="text/css" href="styles.css">
     <!--[if lt IE 9]>
@@ -14,9 +14,38 @@
   </head>
 
   <body>
-      <h1>you won you, yay</h1>
+      <h2 id="Winner"></h2>
       
-      <a href="startPage.html" class="button">REVENGEAH!</a>
+        <section>
+        <img id='red' src="img/Red.png" alt="1">
+        <img id='blue' src="img/Blue.png" alt="2">
+      </section>
+      
+      <a href="startpage.html"><img border="0" style='display: block; margin-left: auto; margin-right: auto; width: 15%; padding-top: 40px;' src="img/play_again.png" alt="Play Again?"></a>
+
+  <script>
+    window.onload = function() {
+        let score1 = localStorage.getItem('score1');
+        let score2 = localStorage.getItem('score2');
+        if (score1 > score2){
+            document.getElementById('Winner').innerHTML = "Player 1 wins!";
+            document.getElementById('red').src = 'img/red_win.png';
+            document.getElementById('blue').src = 'img/blue_lose.png';
+        }
+
+        else if (score1 < score2){
+            document.getElementById('Winner').innerHTML = "Player 2 wins!";
+            document.getElementById('red').src = 'img/red_lose.png';
+            document.getElementById('blue').src = 'img/blue_win.png';
+        }
+
+        else{
+            document.getElementById('Winner').innerHTML = "It's a tie!";
+            document.getElementById('red').src = 'img/red_lose.png';
+            document.getElementById('blue').src = 'img/blue_lose.png';
+        }
+    }
+  </script>
       
   </body>
 </html>
