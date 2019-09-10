@@ -17,7 +17,20 @@
       
       <h1>Wizard 2, ready?</h1>
       
-      <a href="realWar2.html" class="button">Start!</a>
+      <a class="button" onclick="timer()">Start!</a>
+      
+      <p id="timerOutput"></p>
+      
+      <script>
+      function timer(){
+          var timerText = document.getElementById("timerOutput");
+          timerText.innerHTML = 3;
+          setTimeout(function(){ timerText.innerHTML="2" }, 1000);
+          setTimeout(function(){ timerText.innerHTML="1" }, 2000);
+          setTimeout(function(){window.location = "realWar2.html";}, 3000);
+      }
+
+      </script>
 
   </body>
 </html>

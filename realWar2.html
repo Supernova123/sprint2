@@ -13,7 +13,37 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body onload="timer()">
+      
+      
+      <p id="timerOutput"></p>
+      
+      <script>
+      function timer(){
+          var timerText = document.getElementById("timerOutput");
+          timerText.innerHTML = 15;
+          setTimeout(function(){ timerText.innerHTML="14" }, 1000);
+          setTimeout(function(){ timerText.innerHTML="13" }, 2000);
+          setTimeout(function(){ timerText.innerHTML="12" }, 3000);
+          setTimeout(function(){ timerText.innerHTML="11" }, 4000);
+          setTimeout(function(){ timerText.innerHTML="10" }, 5000);
+          setTimeout(function(){ timerText.innerHTML="9" }, 6000);
+          setTimeout(function(){ timerText.innerHTML="8" }, 7000);
+          setTimeout(function(){ timerText.innerHTML="7" }, 8000);
+          setTimeout(function(){ timerText.innerHTML="6" }, 9000);
+          setTimeout(function(){ timerText.innerHTML="5" }, 10000);
+          setTimeout(function(){ timerText.innerHTML="4" }, 11000);
+          setTimeout(function(){ timerText.innerHTML="3" }, 12000);
+          setTimeout(function(){ timerText.innerHTML="2" }, 13000);
+          setTimeout(function(){ timerText.innerHTML="1" }, 14000);
+          setTimeout(function(){ timerText.innerHTML= "0";}, 15000);
+          setTimeout(function(){ timerText.innerHTML= "TIMEOUT!";}, 16000);
+      }
+
+      </script>
+      
+      
+      
       
       <h1>Say em spells!</h1>
       
